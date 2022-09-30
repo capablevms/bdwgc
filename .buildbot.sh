@@ -110,7 +110,7 @@ echo "Running tests for morello-purecap"
 args=(
       --architecture morello-purecap
       # Qemu System to use
-      --qemu-cmd ${CHERI_DIR}/morello-sdk/bin/qemu-system-morello
+      --qemu-cmd ${CHERI_DIR}/sdk/bin/qemu-system-morello
       # Kernel (to avoid the default one)
       --kernel ${CHERI_DIR}/rootfs-morello-purecap/boot/kernel/kernel
       # Bios (to avoid the default one)
