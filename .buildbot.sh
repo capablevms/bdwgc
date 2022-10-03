@@ -1,12 +1,12 @@
 #!/bin/bash
 set -e
 
-CHERIBUILD=~/build
-CHERI_DIR=/home/buildbot/cheri/output
+set ${CHERIBUILD:="/home/buildbot/build"}
+set ${CHERI_DIR:="/home/buildbot/cheri/output"}
 
-export SSHPORT=10021
-export SSHHOST=localhost
-export PYTHONPATH="$CHERIBUILD"/test-scripts
+export ${SSHPORT:=10021}
+export ${SSHHOST:=localhost}
+export ${PYTHONPATH:=${CHERIBUILD}/test-scripts}
 
 # arg-1 : platform to build. Toolchain file is expected to have the same name
 build_bdwgc()
